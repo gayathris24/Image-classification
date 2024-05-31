@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Enhancement</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #107896; /* Light Pink */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            border: 10px solid #f1f4f4; /* Salmon */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Darker Shadow */
+        }
+
+        #content-container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #e2f2f7; /* Deep Sky Blue */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text Shadow */
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #00bfff; /* Deep Sky Blue */
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #00bfff; /* Deep Sky Blue */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text Shadow */
+        }
+
+        button:hover {
+            background-color: #1e90ff; /* Dodger Blue */
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #eaf4f7; /* Deep Sky Blue */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text Shadow */
+        }
+
+        img {
+            max-width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>Image Enhancement</h1>
+    <form method="post" action="/image_enhancement" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Enhance Image</button>
+    </form>
+
+    {% if result_image %}
+        <h2>Result:</h2>
+        <img src="{{ result_image }}" alt="Enhanced Image">
+
+        <!-- Add a download link for the enhanced image -->
+        <p><a href="{{ result_image }}" download="enhanced_image.png">Download Enhanced Image</a></p>
+    {% endif %}
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

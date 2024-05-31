@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-color: #e6f7ff; /* Light blue shade */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #004080; /* Dark blue shade */
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #ffffff; /* White */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Added margin between cards */
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #007acc; /* Medium blue shade */
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: #003366; /* Dark blue shade */
+            padding: 10px;
+            text-align: right;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Altervue</h1>
+
+    <nav>
+        <a href="#">About</a>
+        <a href="#">Login</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    <div class="grid-container">
+        <div class="card">
+            <h2>Image Enhancement</h2>
+            <a href="/image_enhancement" class="button">Go to Image Enhancement</a>
+        </div>
+        <div class="card">
+            <h2>Image Dehazing</h2>
+            <a href="/dehaze" class="button">Go to Image Dehazing</a>
+        </div>
+        <div class="card">
+            <h2>Image Resolution</h2>
+            <a href="/enhance_resolution" class="button">Go to Image Resolution</a>
+        </div>
+        
+        <div class="card">
+            <h2>Low Light Enhancement</h2>
+            <a href="/enhance_low_light" class="button">Go to Low light enhancement</a>
+        </div>
+        <div class="card">
+            <h2>Image Sharpening</h2>
+            <a href="/sharpen" class="button">Go to Image Sharpening</a>
+        </div>
+    </div>
+</body>
+</html>
